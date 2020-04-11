@@ -1,11 +1,7 @@
 
-### Structure of the components - check [how-to-organize-your-components-using-the-atomic-design-dj3](https://dev.to/sanfra1407/how-to-organize-your-components-using-the-atomic-design-dj3)
-
-- src
-  - components
-    - atoms
-    - molecules
-    - organisms
+### In the project used sources: 
+- https://dev.to/sanfra1407/how-to-organize-your-components-using-the-atomic-design-dj3)
+- https://devcenter.heroku.com/categories/heroku-architecture
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
