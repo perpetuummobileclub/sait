@@ -1,7 +1,7 @@
 import React, { useEffect, Fragment } from 'react';
 import { createMuiTheme, makeStyles, MuiThemeProvider } from '@material-ui/core/styles';
 import { Grid, Typography} from '@material-ui/core';
-import { Button } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import { Container } from '@material-ui/core';
 
 const colortheme = createMuiTheme({
@@ -40,28 +40,36 @@ const Home = () => {
   return (
     <>
       <MuiThemeProvider theme={colortheme}>
-        <div className={classes.paperContainer}>
-          <Typography m={4} style={{ paddingTop: '60px', paddingBottom: '30px' }} component="h1" variant="h2" align="center" color="primary" gutterBottom>
-            Perpetuum mobile club
-          </Typography>
-          <Container>
-            <Typography variant="h5" align="center" color="primary" paragraph>
-              Engineering activities, Software activities. Members should be only volunteers.
-            </Typography>
-            <Grid
-              container
-              spacing={0}
-              direction="column"
-              alignItems="center"
-              justify="center"
-              style={{ paddingTop: '30px', paddingBottom: '50px' }}
-            >
-              <Button variant="contained" className={classes.backgroundOrange}  color="secondary" style={{ padding: '14px' }}>
-                Get Started
-              </Button>
+        <Container className={classes.paperContainer}>
+            <Grid container>
+                  <form className={classes.root} noValidate autoComplete="off">
+                <Grid item xs={12}>
+                    <TextField id="search-ideas" label="Search ideas" variant="outlined" />
+                </Grid>
+                <Grid>
+                <Button variant="contained" className={classes.backgroundOrange}  color="secondary">
+                      Search
+                    </Button>
+                </Grid>
+
+                  </form>
             </Grid>
-          </Container>
-        </div>
+            <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <Typography m={4} style={{ paddingTop: '60px', paddingBottom: '30px' }} component="h1" variant="h2" align="center" color="primary" gutterBottom>
+                    Perpetuum mobile club
+                  </Typography>
+                  <Typography variant="h5" align="center" color="primary" paragraph>
+                    Engineering activities, Software activities. Members should be only volunteers.
+                  </Typography>
+                </Grid>
+            </Grid>
+            <Grid container>
+              <Grid item xs={12}>
+
+              </Grid>
+            </Grid>
+        </Container>
       </MuiThemeProvider>
       <Container>
       </Container>
